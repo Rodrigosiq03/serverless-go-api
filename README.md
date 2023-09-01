@@ -37,6 +37,32 @@ $ http://localhost:8080/get-all-products
 $ https://jman3u5a0f.execute-api.us-east-1.amazonaws.com/prod
 ```
 
+## Verify if GO is installed
+
+```bash
+$ go version
+```
+
+## If not installed, follow the steps below
+
+### 1. Download the Go package
+
+```bash
+$ wget https://golang.org/dl/go1.16.5.linux-amd64.tar.gz
+```
+
+### 2. Extract the package
+
+```bash
+$ sudo tar -C /usr/local -xzf go1.16.5.linux-amd64.tar.gz
+```
+
+### 3. Add the path to the Go binary to your PATH environment variable
+
+```bash
+$ export PATH=$PATH:/usr/local/go/bin
+```
+
 ## 📝 License
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
