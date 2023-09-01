@@ -1,0 +1,18 @@
+service: serverless-go-api
+frameworkVersion: ">=1.28.0"
+provider:
+  name: aws
+  runtime: go1.x
+  region: us-east-1
+  stage: ${opt:stage}
+functions:
+  products_api:
+    handler: bin/products_api
+    events:
+      - http:
+          path: /get-all-products
+          method: GET
+package:
+  patterns:
+    - '!*/**'
+    - bin/products_api
